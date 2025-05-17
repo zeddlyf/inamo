@@ -1,11 +1,12 @@
 import os
 from dotenv import load_dotenv
 from pymongo import MongoClient
+from pymongo.server_api import ServerApi
 
 load_dotenv()
 
 MONGO_URI = os.getenv("MONGO_URI")
-client = MongoClient(MONGO_URI)
+client = MongoClient(MONGO_URI,server_api=ServerApi('1'))
 db = client["Eyytrike"]
 
 # def check_connection():
