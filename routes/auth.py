@@ -15,7 +15,11 @@ def register():
     data = request.get_json()
     hashed_pw = generate_password_hash(data["password"])
     user_data = {**data, "password": hashed_pw}
-    
+
+    # Conditioning for organizing user types
+    # if "user_type" is "driver":
+    #     user_data["user_type"] = "commuter"  # Default user type
+
     user_collection.insert_one(user_data)
     return jsonify({"message": "User registered successfully!"})
 
