@@ -1,3 +1,15 @@
-.env
-__pycache__/
-*.py[cod]
+# Virtual environment (if created in the project folder)
+venv/
+env/
+
+# IDE/editor configs
+.vscode/
+*.swp
+.DS_Store
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Log or temp files
+*.log
+*.tmp
