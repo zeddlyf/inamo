@@ -11,7 +11,6 @@ from routes.wallet import bp as wallet_bp
 from routes.payment import bp as payment_bp
 from routes.transaction_history import bp as transaction_history_bp
 from routes.booking import bp as booking_bp
-# from routes.ride_tracking import bp as ride_tracking_bp
 from routes.navigation import bp as navigation_bp
 from routes.push_notifications import bp as push_notifications_bp
 
@@ -45,7 +44,6 @@ app.register_blueprint(wallet_bp, url_prefix="/wallet")
 app.register_blueprint(payment_bp, url_prefix="/payment")
 app.register_blueprint(transaction_history_bp, url_prefix="/transactions")
 app.register_blueprint(booking_bp, url_prefix="/booking")
-# app.register_blueprint(ride_tracking_bp, url_prefix="/ride_tracking")
 app.register_blueprint(navigation_bp, url_prefix="/navigation")
 app.register_blueprint(push_notifications_bp, url_prefix="/notifications")
 
