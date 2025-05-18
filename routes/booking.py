@@ -58,6 +58,13 @@ def get_booking():
 
     return Response(json_doc, mimetype='application/json'), 200
 
+
+@bp.route("/get_bookings", methods=["GET"])
+def get_bookings():
+    bookings = list(booking_collection.find())
+    response = Response(json_util.dumps(bookings), mimetype='application/json')
+    return response, 200
+
 @bp.route("/update_booking", methods=["POST"]) # You can use Update function to change the status of the booking
 def cancel_booking():
     data = request.get_json()
